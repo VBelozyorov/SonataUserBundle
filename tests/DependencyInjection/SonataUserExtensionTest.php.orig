@@ -136,6 +136,22 @@ final class SonataUserExtensionTest extends AbstractExtensionTestCase
         $this->load(['class' => ['user' => '\Sonata\UserBundle\Tests\Entity\User']]);
     }
 
+<<<<<<< HEAD
+    /**
+     * @group legacy
+     * @expectedDeprecation The 'Google\Authenticator' namespace is deprecated in sonata-project/GoogleAuthenticator since version 2.1 and will be removed in 3.0.
+     */
+    public function testCorrectAdminClass(): void
+    {
+        $this->load(['admin' => ['user' => ['class' => '\Sonata\UserBundle\Tests\Admin\Entity\UserAdmin']]]);
+    }
+
+    /**
+     * @group legacy
+     * @expectedDeprecation The 'Google\Authenticator' namespace is deprecated in sonata-project/GoogleAuthenticator since version 2.1 and will be removed in 3.0.
+     */
+=======
+>>>>>>> vyshkant/external_model_classes_mapping_check_fix
     public function testCorrectModelClassWithNotDefaultManagerType(): void
     {
         $this->load([
@@ -147,12 +163,20 @@ final class SonataUserExtensionTest extends AbstractExtensionTestCase
         ]);
     }
 
+<<<<<<< HEAD
+    /**
+     * @group legacy
+     * @expectedDeprecation The 'Google\Authenticator' namespace is deprecated in sonata-project/GoogleAuthenticator since version 2.1 and will be removed in 3.0.
+     */
+    public function testIncorrectModelClass(): void
+=======
     public function testExternalModelClass(): void
     {
         $this->load(['class' => ['user' => 'Foo\User', 'group' => 'Foo\Group']]);
     }
 
     public function testNotCorrespondingUserClass(): void
+>>>>>>> vyshkant/external_model_classes_mapping_check_fix
     {
         $this->expectException('InvalidArgumentException');
 
@@ -163,7 +187,15 @@ final class SonataUserExtensionTest extends AbstractExtensionTestCase
         $this->load(['manager_type' => 'mongodb', 'class' => ['user' => 'Sonata\UserBundle\Tests\Entity\User']]);
     }
 
+<<<<<<< HEAD
+    /**
+     * @group legacy
+     * @expectedDeprecation The 'Google\Authenticator' namespace is deprecated in sonata-project/GoogleAuthenticator since version 2.1 and will be removed in 3.0.
+     */
+    public function testNotCorrespondingModelClass(): void
+=======
     public function testNotCorrespondingGroupClass(): void
+>>>>>>> vyshkant/external_model_classes_mapping_check_fix
     {
         $this->expectException('InvalidArgumentException');
 

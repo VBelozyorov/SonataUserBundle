@@ -276,10 +276,14 @@ class SonataUserExtension extends Extension implements PrependExtensionInterface
         $container->getAlias('sonata.user.group_manager')->setPublic(true);
     }
 
+<<<<<<< HEAD
+    private function checkManagerTypeToModelTypeMapping(array $config): void
+=======
     /**
      * @param array $config
      */
     private function checkManagerTypeToModelTypesMapping(array $config): void
+>>>>>>> vyshkant/external_model_classes_mapping_check_fix
     {
         $managerType = $config['manager_type'];
 
